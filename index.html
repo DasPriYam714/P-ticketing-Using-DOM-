@@ -148,7 +148,7 @@
         </section>
     </header>
 
-    <main>
+    <main id="main">
         <section class="bg-[#F7F8F8] rounded-t-[88px] border-[3px] border-t-lime-500">
             <div class=" max-w-screen-2xl w-4/5 mx-auto ">
                 <div class=" flex flex-col items-center space-y-5">
@@ -236,16 +236,14 @@
                             <span>Warning: You can not select more then 4 seat</span>
                         </div>
                     </div>
-
-                    <!-- bus ticket section -->
                     <div class="flex w-full mt-">
 
                         <div class=" w-1/2">
                             <div class=" items-center ml-6 m-6">
-                                <p>Select Your Seat</p>
+                                <p class="text-2xl font-semibold">Select Your Seat</p>
                             </div>
 
-                            <p class="border-dotted border-2 border-black-500 ..."></p>
+                            <p class="border-dotted border-2 border-black-500"></p>
 
                             <div class="flex justify-between mt-6 ml-6">
                                 <div class="flex ">
@@ -350,12 +348,12 @@
                         <div class=" w-[50%] flex flex-col">
                             <div class="w-full">
                                 <div class=" items-center ml-6 m-6">
-                                    <p>Select Your Seat</p>
+                                    <p class="text-2xl font-semibold">Select Your Seat</p>
 
                                 </div>
                                 <p class="border-dotted border-2 border-black-500"></p>
                             </div>
-                            <div class="flex justify-between mt-6 ml-6">
+                            <div class="flex justify-between my-6 ml-6">
                                 <div>
                                     <p>Seat <span id="add-ticket-num" class="text-green-500">0</span></p>
                                 </div>
@@ -369,9 +367,7 @@
 
                             </div>
                             <p class="border-solid border-2 border-black-500"></p>
-                            <!-- <div id="seat-track" class="flex justify-between my-6 ml-6">
-                               
-                            </div> -->
+                          
                             <ul id="seat-track">
 
                             </ul>
@@ -402,12 +398,16 @@
                                 </div>
 
                             </div>
+                            <div role="alert" id="coupon-alert" class="alert alert-error hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                <span>Error! Coupon Code did not matched.</span>
+                              </div>
 
-                            <div class="flex flex-col items-center justify-between mt-4 w-full ">
-                                <div>
-                                    <!-- <input  type="text" name="" class="ID1" placeholder="Have any copupon?"> -->
-                                    <input class="btn" type="text">
-                                    <button class="btn btn-success">Apply</button>
+                            <div class="flex flex-col  justify-between mt-4 mx-auto ">
+                                <div class="btn-apply-box">
+                                  
+                                    <input id="input-coupon" class="btn" type="text">
+                                    <button id="btn-apply" class="btn btn-success ">Apply</button>
                                 </div>
                             </div>
                             <div class="flex justify-between items-center mt-6 ml-6 ">
@@ -416,7 +416,7 @@
                                 </div>
 
                                 <div>
-                                    <p>0</p>
+                                    <p id="grand-total-value">0</p>
 
                                 </div>
 
@@ -433,7 +433,7 @@
 
 
                             <div class="flex justify-center">
-                                <button class="btn btn-success rounded-3xl w-[300px]">Next</button>
+                                <button id="btn" class="btn btn-success rounded-3xl w-[300px]">Next</button>
                             </div>
 
 
@@ -450,8 +450,10 @@
                             </div>
                         </div>
                     </div>
+                   
                 </div>
-        </section>
+            </div>
+        </section>  
     </main>
 
     <footer class="bg-[#030712] py-20 px-8">
@@ -487,7 +489,7 @@
          </div>
        
          <div class="flex items-center justify-between w-full">
-           <p class="text-[#FFFFFF] cursor-pointer">Terms &condition</p>
+           <p class="text-[#FFFFFF] cursor-pointer">Terms & condition</p>
            <p class="text-[#FFFFFF] cursor-pointer">Return & refund policy</p>
            <p class="text-[#FFFFFF] cursor-pointer">Privacy policy</p>
        
@@ -500,9 +502,27 @@
         </div>
        
     </footer>
+    <section>
+        <div id="btn-next" class="hidden">
+            <section class="container mx auto items-center mt-[80px] ">
+                <div class=" flex flex-col items-center justify-center mt-[80px] space-y-3 ">
+                    <img src="resources/success.png" alt="">
+                    <p>SUCCESS</p>
+                    <p class="items-center">Thank you for Booking Our Bus Seats.
+                        We are working hard to find the best service and deals for you</p>
+                    <p>Shortly you will find a confirmation in your email.</p>
+                    <button class="btn btn-success rounded-3xl w-[300px]">Continue</button>
+                </div>
+            </section>
+        </div>
+    </section>
 
     <script src="script/count.js"></script>
     <script src="script/ticColour.js"></script>
     
 </body>
+
 </html>
+
+
+
