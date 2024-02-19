@@ -43,7 +43,10 @@ for (const btn of allBtn) {
             li.appendChild(p2);
             li.appendChild(p3);
             selectedSeat.appendChild(li);
-            //Apply
+            
+
+
+            // take cupon start here
             document.getElementById('btn-apply').addEventListener('click', function (event) {
                 const couponCode = document.getElementById('input-coupon').value;
                 let totalCostElement = document.getElementById('grand-total-value');
